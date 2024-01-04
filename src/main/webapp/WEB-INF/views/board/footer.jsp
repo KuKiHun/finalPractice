@@ -8,7 +8,8 @@
     </style>
 </head>
 <body>
-    <h1>안녕나는 회장이야</h1>
+    <h2>안녕난 사장이야</h2>
+    <h2>안녕난 신입이야</h2>
 <!--  footer  -->
 <!--  top scroll button  -->
 <!--  popup login, sign up  -->
