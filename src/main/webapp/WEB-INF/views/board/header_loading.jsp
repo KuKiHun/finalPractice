@@ -127,7 +127,7 @@
 
         <!--Model Popup Section Start-->
     
-            <!--회원가입 팝업 -->
+            <!--회원가입 팝업f -->
             <div class="modal fade twm-sign-up" id="sign_up_popup" aria-hidden="true" aria-labelledby="sign_up_popupLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
