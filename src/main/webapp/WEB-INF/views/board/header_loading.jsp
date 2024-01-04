@@ -330,7 +330,7 @@
                                 <div class="twm-tabs-style-2">
                                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
 
-                                        <!--일반회원dddddd-->  
+                                        <!--일반회원-->  
                                         <li class="nav-item">
                                             <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login-candidate" type="button"><i class="fas fa-user-tie"></i>일반회원</button>
                                         </li>
