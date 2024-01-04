@@ -8,7 +8,7 @@
     </style>
 </head>
 <body>
-    <h2>안녕나의 프렞ㄱ</h2>
+    <h1>안녕나는 회장이야</h1>
 <!--  footer  -->
 <!--  top scroll button  -->
 <!--  popup login, sign up  -->
