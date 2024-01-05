@@ -1,7 +1,10 @@
+let map; // 전역 변수로 map 선언
+const markers = []; // 전역 변수로 markers 배열 선언
+
 // 먼저 정한 callback 함수 이름으로
 window.initMap = function () {
 	// 어느 부분에 띄울건지
-	const map = new google.maps.Map(document.getElementById("map"), {
+	map = new google.maps.Map(document.getElementById("map"), {
 		// 두번째 인자는 어떻게 보여줄건지에 관해
 		center: {lat: 37.5639635, lng: 126.8916867}, // 위도경도
 		zoom: 10 // 처음 로딩때 줌값
@@ -10,9 +13,9 @@ window.initMap = function () {
 	/*----------------------------------------------------------------*/
 	
 	const markers = [
-		{name:'대법원', lat:37.49258355, lng:127.00515708995646},
-		{name:'양형위원회', lat:37.49258355, lng:127.00515708995646},
-		{name:'법원행정처', lat:37.49258355, lng:127.00515708995646},
+		{name:'대법원', lat:37.49255, lng:127.005157089},
+		{name:'양형위원회', lat:37.49258, lng:127.00515708},
+		{name:'법원행정처', lat:37.49260, lng:127.00515708},
 		{name:'서울고등법원', lat:37.4858131, lng:127.0157906},
 		{name:'서울중앙지방법원', lat:37.4858131, lng:127.0157906},
 		{name:'서울가정법원', lat:37.4966787, lng:127.0280676},
@@ -223,7 +226,7 @@ window.initMap = function () {
 		marker.addListener("click", () => {
 			// 클릭시 마커위치로 이동
 			map.panTo(marker.position);
-			map.setZoom(15);
+			map.setZoom(18.5);
 			infoWindow.setContent(name);
 			infoWindow.open({
 				anchor: marker,
@@ -233,3 +236,21 @@ window.initMap = function () {
 	});
 	map.fitBounds(bounds);
 };
+
+window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.site-text-primary');
+
+    elements.forEach(element => {
+        element.addEventListener('click', (e) => {
+			e.preventDefault(); // 기존 동작 막기
+            // 이동될 경로값 (임시값)
+            const latitude = 37.49258355;
+            const longitude = 127.00515708995646;
+
+            // 클릭시 지도 이동
+            map.panTo({ lat: latitude, lng: longitude });
+            // 줌 레벨
+            map.setZoom(18.5);
+        });
+    });
+});

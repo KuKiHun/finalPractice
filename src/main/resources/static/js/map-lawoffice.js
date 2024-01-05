@@ -1,7 +1,10 @@
+let map; // 전역 변수로 map 선언
+const markers = []; // 전역 변수로 markers 배열 선언
+
 // 먼저 정한 callback 함수 이름으로
 window.initMap = function () {
 	// 어느 부분에 띄울건지
-	const map = new google.maps.Map(document.getElementById("map"), {
+	map = new google.maps.Map(document.getElementById("map"), {
 		// 두번째 인자는 어떻게 보여줄건지에 관해
 		center: {lat: 37.5639635, lng: 126.8916867}, // 위도경도
 		zoom: 10 // 처음 로딩때 줌값
@@ -10,7 +13,7 @@ window.initMap = function () {
 	/*----------------------------------------------------------------*/
 	
 	const markers = [
-		{name:'광화문 법무법인', lat:37.57017, lng:126.97417},
+		{name:'광화문 법무법인', lat:37.5696573, lng:126.9763366},
 		{name:'동방종합 법무법인', lat:37.5613012, lng:126.99257417340904},
 		{name:'법무법인 삼덕', lat:35.18762, lng:129.06912},
 		{name:'법무법인 네이버스', lat:37.57119, lng:126.9802178},
@@ -917,7 +920,7 @@ window.initMap = function () {
 		marker.addListener("click", () => {
 			// 클릭시 마커위치로 이동
 			map.panTo(marker.position);
-			map.setZoom(15);
+			map.setZoom(18.5);
 			infoWindow.setContent(name);
 			infoWindow.open({
 				anchor: marker,
@@ -927,3 +930,21 @@ window.initMap = function () {
 	});
 	map.fitBounds(bounds);
 };
+
+window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.site-text-primary');
+
+    elements.forEach(element => {
+        element.addEventListener('click', (e) => {
+			e.preventDefault(); // 기존 동작 막기
+            // 이동될 경로값 (임시값)
+            const latitude = 37.5696573;
+            const longitude = 126.9763366;
+
+            // 클릭시 지도 이동
+            map.panTo({ lat: latitude, lng: longitude });
+            // 줌 레벨
+            map.setZoom(18.5);
+        });
+    });
+});

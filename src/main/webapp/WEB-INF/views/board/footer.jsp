@@ -40,9 +40,9 @@
                                     <div class="widget widget_services ftr-list-center">
                                         <h3 class="widget-title">검색</h3>
                                         <ul>
-                                            <li><a href="lawyer">변호사</a></li>
-                                            <li><a href="">법률사무소</a></li>
+                                            <li><a href="">변호사</a></li>
                                             <li><a href="">법원</a></li>                    
+                                            <li><a href="">법률사무소</a></li>
                                         </ul>
                                     </div>
                                 </div>

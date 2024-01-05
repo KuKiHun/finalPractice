@@ -50,8 +50,8 @@
                                 <li class="has-child"><a href="javascript:;">검색</a>
                                     <ul class="sub-menu">
                                         <li><a href="lawyer">변호사</a></li>
-                                        <li><a href="lawoffice">법률사무소</a></li>
                                         <li><a href="court">법원</a></li>
+                                        <li><a href="lawoffice">법률사무소</a></li>
                                    </ul>                                                                 
                                 </li>
                                 <li class="has-child"><a href="javascript:;">법률상담</a>
@@ -105,19 +105,7 @@
                 
                 
                 </div>
-
-                <!-- SITE Search -->
-                <div id="search"> 
-                    <span class="close"></span>
-                    <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                        <input class="form-control" value="" name="q" type="search" placeholder="Type to search"/>
-                        <span class="input-group-append">
-                            <button type="button" class="search-btn">
-                                <i class="fa fa-paper-plane"></i>
-                            </button>
-                        </span>
-                    </form>
-                </div> 
+ 
             </div>
 
         </header>
@@ -127,14 +115,14 @@
 
         <!--Model Popup Section Start-->
     
-            <!--회원가입 팝업 -->
+            <!--일반 회원가입 팝업 -->
             <div class="modal fade twm-sign-up" id="sign_up_popup" aria-hidden="true" aria-labelledby="sign_up_popupLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <form>
 
                             <div class="modal-header">
-                                <h2 class="modal-title" id="sign_up_popupLabel">회원가입</h2>
+                                <h2 class="modal-title" id="sign_up_popupLabel">일반회원 회원가입</h2>
                                 <p>FolLaw에 오신 것을 환영합니다.</p>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
@@ -181,6 +169,128 @@
                                                 <div class="form-group mb-3">
                                                     전화번호
                                                     <input name="tel" type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    <div class=" form-check">
+                                                        <input type="checkbox" class="form-check-input" id="agree1">
+                                                        <label class="form-check-label" for="agree1"><a href="javascript:;" data-bs-toggle="modal" data-bs-target="#user_agreement" data-bs-dismiss="modal">이용약관</a>에 모두 동의합니다.</label>
+                                                        <p>이미 회원이신가요?
+                                                            <button class="twm-backto-login" data-bs-target="#sign_up_popup2" data-bs-toggle="modal" data-bs-dismiss="modal">로그인</button>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button type="submit" class="site-button">가입완료</button>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div> 
+                            </div>
+
+<!--                            <div class="modal-footer">
+                                <span class="modal-f-title">SNS연동 회원가입</span>
+                                <ul class="twm-modal-social">
+                                    <li><a href="javascript" class="facebook-clr"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="javascript" class="twitter-clr"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="javascript" class="linkedin-clr"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="javascript" class="google-clr"><i class="fab fa-google"></i></a></li>
+                                </ul>
+                            </div>-->
+
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        
+            <!--변호사 회원가입 팝업 -->
+            <div class="modal fade twm-sign-up" id="lawyer_sign_up_popup" aria-hidden="true" aria-labelledby="sign_up_popupLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <form>
+
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="sign_up_popupLabel">변호사 회원가입</h2>
+                                <p>FolLaw에 오신 것을 환영합니다.</p>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="twm-tabs-style-2">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                    <!--Signup Candidate Content-->  
+                                    <div class="tab-pane fade show active" id="sign-candidate">
+                                        <div class="row">
+                                            
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    이름
+                                                    <input name="name" type="text" required="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    아이디
+                                                    <input name="username" type="text" required="" class="form-control">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    비밀번호
+                                                    <input name="password" type="password" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    생년월일
+                                                    <input name="birthdate" type="date" class="form-control" required="">
+                                                </div>
+                                            </div>
+            
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    전화번호
+                                                    <input name="tel" type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-3">
+                                                    출신시험선택
+                                               <select class="wt-select-box selectpicker" title="" id="j-category" data-bv-field="size">
+                                                    <option class="bs-title-option" value="">시험선택</option>
+                                                    <option>사법고시</option>
+                                                    <option>변호사시험</option>
+                                                    <option>군법무관 임용시험</option>
+                                                    <option>고등고시</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-3">
+                                                    시험회차
+                                                    <input name="tel" type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-3">
+                                                    변호사 증명서류 첨부
+                                                    <input type="file" name="myfile" id="file-uploader" accept=".pdf" required>
                                                 </div>
                                             </div>
                                             
@@ -358,7 +468,6 @@
                                                     </div>
                                                 </div>
                                                 
-                                                
                                                 <div class="col-lg-12">
                                                     <div class="form-group mb-3">
                                                         <div class=" form-check">
@@ -399,7 +508,7 @@
                                                     <div class="form-group mb-3">
                                                         <div class=" form-check">
                                                             <input type="checkbox" class="form-check-input" id="Password4">
-                                                            <label class="form-check-label rem-forgot" for="Password4">아이디 저장<a href="javascript:;">비밀번호 찾기</a></label>
+                                                            <label class="form-check-label rem-forgot" for="Password4">아이디 저장<a href="javascript:;" data-bs-toggle="modal" data-bs-target="#find-pass" data-bs-dismiss="modal">비밀번호 찾기</a></label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -407,7 +516,7 @@
                                                 <div class="col-md-12">
                                                     <button type="submit" class="site-button">로그인</button>
                                                     <div class="mt-3 mb-3">아직 회원이 아니신가요? 
-                                                        <button class="twm-backto-login" data-bs-target="#sign_up_popup" data-bs-toggle="modal" data-bs-dismiss="modal">회원가입</button>
+                                                        <button class="twm-backto-login" data-bs-target="#lawyer_sign_up_popup" data-bs-toggle="modal" data-bs-dismiss="modal">회원가입</button>
                                                     </div>
                                                 </div>
                                                 

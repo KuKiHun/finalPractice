@@ -22,15 +22,6 @@
 <!-- 제이쿼리 CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-        $(document).ready(function() {
-    // 위치보기 버튼 클릭 이벤트
-    $('.twm-jobs-browse').on('click', function(e) {
-        e.preventDefault();
-
-        // 여기에서 maps.js의 함수를 호출하여 지도의 중심 위치 변경
-        changeMapCenter(); // 예시로 함수 이름을 changeMapCenter로 가정
-    });
-});
 </script>
     <!-- META -->
     <meta charset="utf-8">
@@ -107,17 +98,22 @@
                                             <div class="ls-inputicon-box">  
                                                 <select class="wt-select-box selectpicker"  data-live-search="true" title="" id="j-category" data-bv-field="size">
                                                     <option class="bs-title-option" value="">지역선택</option>
-                                                    <option>Accounting and Finance</option>
-                                                    <option>Clerical &amp; Data Entry</option>
-                                                    <option>Counseling</option>
-                                                    <option>Court Administration</option>
-                                                    <option>Human Resources</option>
-                                                    <option>Investigative</option>
-                                                    <option>IT and Computers</option>
-                                                    <option>Law Enforcement</option>
-                                                    <option>Management</option>
-                                                    <option>Miscellaneous</option>
-                                                    <option>Public Relations</option>
+                                                    <option>서울</option>
+                                                    <option>경기</option>
+                                                    <option>인천</option>
+                                                    <option>대전</option>
+                                                    <option>광주</option>
+                                                    <option>대구</option>
+                                                    <option>울산</option>
+                                                    <option>부산</option>
+                                                    <option>경기</option>
+                                                    <option>충남</option>
+                                                    <option>충북</option>
+                                                    <option>전남</option>
+                                                    <option>전북</option>
+                                                    <option>경남</option>
+                                                    <option>경북</option>
+                                                    <option>제주</option>
                                                 </select>
                                                 <i class="fs-input-icon fa fa-map-marker-alt"></i>
                                             </div>
