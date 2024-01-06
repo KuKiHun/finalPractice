@@ -119,7 +119,7 @@
             <div class="modal fade twm-sign-up" id="sign_up_popup" aria-hidden="true" aria-labelledby="sign_up_popupLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <form>
+                        <form action="/member/insertMember" method="post">
 
                             <div class="modal-header">
                                 <h2 class="modal-title" id="sign_up_popupLabel">일반회원 회원가입</h2>
@@ -140,35 +140,35 @@
                                             <div class="col-lg-12">
                                                 <div class="form-group mb-3">
                                                     이름
-                                                    <input name="name" type="text" required="" class="form-control">
+                                                    <input name="user_name" type="text" required="" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-12">
                                                 <div class="form-group mb-3">
                                                     아이디
-                                                    <input name="username" type="text" required="" class="form-control">
+                                                    <input name="user_id" type="text" required="" class="form-control">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-lg-12">
                                                 <div class="form-group mb-3">
                                                     비밀번호
-                                                    <input name="password" type="password" class="form-control" required="">
+                                                    <input name="user_pass" type="password" class="form-control" required="">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-lg-12">
                                                 <div class="form-group mb-3">
                                                     생년월일
-                                                    <input name="birthdate" type="date" class="form-control" required="">
+                                                    <input name="user_birth" type="date" class="form-control" required="">
                                                 </div>
                                             </div>
             
                                             <div class="col-lg-12">
                                                 <div class="form-group mb-3">
                                                     전화번호
-                                                    <input name="tel" type="text" class="form-control" required="">
+                                                    <input name="user_tel" type="text" class="form-control" required="">
                                                 </div>
                                             </div>
                                             
@@ -194,7 +194,7 @@
                                 </div> 
                             </div>
 
-<!--                            <div class="modal-footer">
+                           <div class="modal-footer">
                                 <span class="modal-f-title">SNS연동 회원가입</span>
                                 <ul class="twm-modal-social">
                                     <li><a href="javascript" class="facebook-clr"><i class="fab fa-facebook-f"></i></a></li>
@@ -202,7 +202,7 @@
                                     <li><a href="javascript" class="linkedin-clr"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li><a href="javascript" class="google-clr"><i class="fab fa-google"></i></a></li>
                                 </ul>
-                            </div>-->
+                            </div>
 
                         </form>
                     </div>
@@ -316,7 +316,7 @@
                                 </div> 
                             </div>
 
-<!--                            <div class="modal-footer">
+                           <div class="modal-footer">
                                 <span class="modal-f-title">SNS연동 회원가입</span>
                                 <ul class="twm-modal-social">
                                     <li><a href="javascript" class="facebook-clr"><i class="fab fa-facebook-f"></i></a></li>
@@ -324,7 +324,7 @@
                                     <li><a href="javascript" class="linkedin-clr"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li><a href="javascript" class="google-clr"><i class="fab fa-google"></i></a></li>
                                 </ul>
-                            </div>-->
+                            </div>
 
                         </form>
                     </div>
@@ -455,16 +455,16 @@
                                         <!--일반회원 로그인-->  
                                         <div class="tab-pane fade show active" id="login-candidate">
                                             <div class="row">
-
+                                                <form action="/member/loginSuccess" method="post">
                                                 <div class="col-lg-12">
                                                     <div class="form-group mb-3">
-                                                        <input name="username" type="text" required="" class="form-control" placeholder="아이디">
+                                                        <input name="user_id" type="text" required="" class="form-control" placeholder="아이디">
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-lg-12">
                                                     <div class="form-group mb-3">
-                                                        <input name="password" type="password" class="form-control" required="" placeholder="비밀번호">
+                                                        <input name="user_pass" type="password" class="form-control" required="" placeholder="비밀번호">
                                                     </div>
                                                 </div>
                                                 
@@ -483,7 +483,7 @@
                                                         <button class="twm-backto-login" data-bs-target="#sign_up_popup" data-bs-toggle="modal" data-bs-dismiss="modal">회원가입</button>
                                                     </div>
                                                 </div>
-                                                
+                                            </form>
                                             </div>
                                         </div>
                                         
@@ -526,7 +526,7 @@
                                     </div>
                                 </div> 
                             </div>
-<!--                            <div class="modal-footer">
+                           <div class="modal-footer">
                                 <span class="modal-f-title">SNS연동 로그인</span>
                                 <ul class="twm-modal-social">
                                     <li><a href="javascript" class="facebook-clr"><i class="fab fa-facebook-f"></i></a></li>
@@ -534,7 +534,7 @@
                                     <li><a href="javascript" class="linkedin-clr"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li><a href="javascript" class="google-clr"><i class="fab fa-google"></i></a></li>
                                 </ul>
-                            </div>-->
+                            </div>
                         </form>
                     </div>
                 </div>
