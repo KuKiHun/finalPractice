@@ -81,23 +81,41 @@
                         </div>
                         
                         <!-- Header Right 로그인 Section-->
-                        <div class="extra-nav header-2-nav">
-                            <div class="extra-cell">
-                                <div class="header-nav-btn-section">
-                                    <div class="twm-nav-btn-left">
-                                        <a class="twm-nav-sign-up" data-bs-toggle="modal" href="#sign_up_popup2" role="button">
-                                            <i class="feather-log-in"></i> 로그인
-                                        </a>
-                                    </div>
-                                    <div class="twm-nav-btn-right">
-                                        <a href="mypage" class="twm-nav-post-a-job">
-                                            <i class="feather-briefcase"></i> 마이페이지
-                                        </a>
-                                    </div>
-                                </div>
-                            </div> 
-                                
-                        </div>                            
+<div class="extra-nav header-2-nav">
+    <div class="extra-cell">
+        <div class="header-nav-btn-section">
+            <div class="twm-nav-btn-left">
+                <!-- 세션에 로그인 정보가 있는 경우 -->
+                <c:if test="${not empty sessionScope.user_name}">
+                    <a href="logout" class="twm-nav-sign-up" onclick="logout()">
+                        <i class="feather-log-out"></i> 로그아웃
+                    </a>
+                    
+                </c:if>
+
+                <!-- 세션에 로그인 정보가 없는 경우 -->
+                <c:if test="${empty sessionScope.user_name}">
+                    <a class="twm-nav-sign-up" data-bs-toggle="modal" href="#sign_up_popup2" role="button">
+                        <i class="feather-log-in"></i> 로그인
+                    </a>
+                </c:if>
+            </div>
+            <div class="twm-nav-btn-right">
+                <!-- 세션에 로그인 정보가 있는 경우에만 마이페이지를 표시 -->
+                <c:if test="${not empty sessionScope.user_name}">
+                    <a href="mypage" class="twm-nav-post-a-job">
+                        <i class="feather-briefcase"></i> 마이페이지
+                    </a>
+                </c:if>
+            </div>
+            <!-- 세션에 로그인 정보가 있는 경우에만 유저이름을 표시 -->
+            <c:if test="${not empty sessionScope.user_name}">
+                <p> 환영합니다. ${sessionScope.user_name} 님</p>
+            </c:if>
+            
+        </div>
+    </div>
+</div>                         
                     
                                                     
                         
@@ -430,7 +448,6 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                     
-                        <form>
                             <div class="modal-header">
                                 <h2 class="modal-title" id="sign_up_popupLabel2">로그인</h2>
                                 <p>FolLaw에 오신 것을 환영합니다.</p>
@@ -455,7 +472,7 @@
                                         <!--일반회원 로그인-->  
                                         <div class="tab-pane fade show active" id="login-candidate">
                                             <div class="row">
-                                                <form action="/member/loginSuccess" method="post">
+                                            <form action="/member/login" method="post">
                                                 <div class="col-lg-12">
                                                     <div class="form-group mb-3">
                                                         <input name="user_id" type="text" required="" class="form-control" placeholder="아이디">

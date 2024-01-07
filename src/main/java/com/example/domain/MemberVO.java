@@ -84,4 +84,6 @@ public class MemberVO {
         this.user_tel = user_tel;
     }
 
+    
+
 }
