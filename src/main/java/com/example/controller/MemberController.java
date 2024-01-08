@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.domain.MemberVO;
 import com.example.service.MemberService;
@@ -39,12 +37,12 @@ public class MemberController {
 			session.setAttribute("user_name", result.getUser_name());
 			//m.addAttribute("member", result);
 			//return "loginSuccess"; // 뷰페이지 지정 (모델값 넘어감)
-			return "/board/lawyer"; // 리다이렉트 (모델값 안넘어감)
+			return "/follaw/index"; // 리다이렉트 (모델값 안넘어감)
 		}else {
 			// 여기서는 뷰페이지 지정이 가능하지만
 			// 일부러 리다이렉트 상황을 만듬
 			
-			return "redirect:/board/lawyer" ; // 로그인 실패 시 폼 페이지로 리다이렉트
+			return "redirect:/follaw/index" ; // 로그인 실패 시 폼 페이지로 리다이렉트
 			
 		}
 	
@@ -67,14 +65,14 @@ public class MemberController {
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
     	session.removeAttribute("username");
-    	return "redirect:/board/lawyer";
+    	return "redirect:/follaw/index";
 	}
 	// 회원가입
 	@RequestMapping("/insertMember")
 	public String insertMember(MemberVO vo) {
 		System.out.println("/member/insertMember 요청:" + vo);
 		memberService.insertMember(vo);
-		return "redirect:/board/lawyer";
+		return "redirect:/follaw/lawyer";
 	}
 	
     // 회원가입 페이지로 이동

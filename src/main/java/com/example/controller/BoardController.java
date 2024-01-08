@@ -12,7 +12,7 @@ import com.example.domain.BoardVO;
 import com.example.service.BoardService;
 
 @Controller
-@RequestMapping("board")
+@RequestMapping("follaw")
 public class BoardController {
 	
 	@Autowired
@@ -21,7 +21,7 @@ public class BoardController {
 	// [요청] http://127.0.0.1:8080/board/xxxxxxxxxxxxxx
 	@RequestMapping("/{step}")
 	public String viewPage(@PathVariable String step) {
-		return "/board/" + step;
+		return "/follaw/" + step;
 	}
 	
 	// 글목록검색
